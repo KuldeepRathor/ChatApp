@@ -1,7 +1,10 @@
+import 'package:chatapp/auth/view/login_screen.dart';
 import 'package:chatapp/chat/views/ChatRoom.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -92,8 +95,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         title: Text("Home Screen"),
         actions: [
           IconButton(
-            onPressed: () {
-              _auth.signOut();
+            onPressed: () async {
+              await GoogleSignIn().signOut();
+              FirebaseAuth.instance.signOut();
+              Get.to(const LoginScreen());
             },
             icon: Icon(Icons.logout),
           ),
