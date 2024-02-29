@@ -5,14 +5,12 @@ This Flutter application allows users to engage in real-time text and image-base
 ## Features
 
 - Real-time text messaging
-- Image messaging
 - Online/offline status indicator
 - User authentication
-- Chat room creation
 
-## Screenshots
+## Incomplete Features
+ - Image messaging
 
-[Insert screenshots here]
 
 ## Getting Started
 
@@ -21,7 +19,7 @@ To run this application on your local machine, follow these steps:
 1. **Clone this repository:**
 
    ```bash
-   git clone https://github.com/your-username/flutter-chat-app.git
+   git clone https://github.com/KuldeepRathor/flutter-chat-app.git
    ```
 
 2. **Navigate to the project directory:**
